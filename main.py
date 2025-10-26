@@ -1,3 +1,6 @@
+"""A prototype program for teaching adults to read"""
+__version__ = '0.1'
+
 from tkinter import *
 from threading import Thread
 import string
