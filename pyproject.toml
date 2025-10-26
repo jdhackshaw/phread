@@ -1,0 +1,31 @@
+[build-system]
+requires = ["flit_core >=3.11,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "phread"
+authors = [{name = "Jack David Hackshaw", email = "u8071615@anu.edu.au"}]
+license = "MIT"
+license-files = ["LICENSE"]
+dynamic = ["version", "description"]
+dependencies = [
+  "tkinter",
+  "sounddevice",
+  "soundfile",
+  "numpy",
+  "whisper",
+  "openai",
+  "Levenshtein"
+]
+
+[tool.flit.sdist]
+include = ["audio/*", "img/*"]
+
+[tool.flit.wheel]
+include = ["audio/*", "img/*"]
+
+[tool.flit.module]
+name = "main"
+
+[project.urls]
+Source = "https://github.com/jdhackshaw/phread"
